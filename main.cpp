@@ -69,7 +69,6 @@ public:
 TEST(DBConnection, test1)
 {
     MockDB mDBreader;
-    // указываем «ожидания» по использованию — методы будут вызваны хотя бы N раз
     EXPECT_CALL(mDBreader, execQuery).Times(::testing::AtLeast(1));
     EXPECT_CALL(mDBreader, open).Times(1);
     EXPECT_CALL(mDBreader, close).Times(1);
